@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+}
+nav.sticky{
+    background: #7a38ff;
+    padding: 15px 20px;
+}
+.nav-content{
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-content .hamburger{
+    display: none;
+}
+.logo a{
+    font-size: 35px;
+    font-weight: 500;
+    color: #7a38ff;
+}
+nav.sticky .logo a{
+    color: white;
+}
+nav.sticky .hamburger{
+    color: white;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    list-style-type: none;
+    margin: 0 8px;
+}
+
+.nav-links li a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    padding: 10px 4px;
+    transition: all 0.4s ease;
+}
+.nav-links li a:hover{
+    color: #7a38ff;
+}
+nav.sticky .nav-links li a{
+    color: white;
+}
+nav.sticky .nav-links li a:hover{
+    color: #252525;
+}
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url(young-woman.png) no-repeat ;
+    background-size: contain;
+    background-position: center;
+}
+.text{
+    padding: 40px 80px;
+    text-align: justify;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+}
+.text h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #7a38ff;
+    margin-bottom: 6px;
+}
+@media (max-width:768px){
+    nav.white{
+        background: #fff;
+    }
+    nav.white.sticky{
+        background: #7a38ff;
+    }
+    .nav-content .hamburger{
+        display: flex;
+        font-size: 25px;
+        color: #7a38ff;
+
+    }
+    .nav-links{
+        position: fixed;
+        display: none;
+    }
+    .nav-links.active{
+        left: 0;
+        top: 70px;
+        display: block;
+        text-align: center;
+        margin: auto;
+        background: #fff;
+        width: 100%;
+    }
+    .sticky .nav-links.active {
+        background: #7a38ff;
+    }
+
+    .nav-links.active li{
+        margin: 20px 0;
+    }
+    .nav-links.active li a{
+        color: #7a38ff;
+    }
+    .nav-links.active li a:hover{
+        color: #000;
+    }
+}
